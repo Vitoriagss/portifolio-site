@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --clr-primaria: #E02D2D;
+    --clr-black: #191919;
+    --clr-white: #EEF2F5;
+
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--clr-black); /* Por padrão todos os textos vão ser pretos */
+}
+
+h1{
+    color: var(--clr-primaria);
+}
