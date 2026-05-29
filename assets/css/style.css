@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     
     background-color: var(--clr-black);
     color: var(--clr-white);
@@ -41,4 +41,61 @@ header nav a{
     text-decoration: none;
 }
 
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    height: 700px;
+
+
+}
+
+.home-cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+
+    height: 400px;
+    padding-inline: 1.5rem;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("/assets/img/darth-full.png");
+    background-repeat: no-repeat;
+    background-position: rem;
+    background-size: 300px;
+}
+
+.home-cta > a{
+    background-color:var(--clr-primaria);
+    width: fit-content;
+
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+
+    font-size: 14px;
+    color: var(--clr-white);
+    text-decoration: none;
+
+    transition: transform 150ms;
+}
+.home-cta > a:hover {
+    transform: scale(1.02);
+}
+
+.home-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.home-heading > h1{
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 500;
+    margin: 0;
+}
+.home-heading > p{
+    line-height: 150%;
+    margin: 0;
+}
