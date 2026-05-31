@@ -2,6 +2,8 @@
 
 /*---------------------- Setup e utilidades -----------------------*/
 
+
+
 :root {
     --clr-primaria: #E02D2D;
     --clr-black: #191919;
@@ -39,6 +41,11 @@
     width: 100%;
 }
 
+.bg-dark{
+    background-color: var(--clr-black);
+}
+
+
 section{
     display: flex;
     flex-direction: column;
@@ -54,6 +61,13 @@ section h2{
     text-transform: uppercase;
 }
 
+@media screen and (min-width: 1024px){
+    section{
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+}
+
 /*--------------- HEADER ------------*/
 
 header {
@@ -62,6 +76,8 @@ header {
     align-items: center;
 
     padding: 1rem 1.5rem;
+    max-width: 1180px;
+    margin: 0 auto;
     
     background-color: var(--clr-black);
     color: var(--clr-white);
@@ -84,6 +100,12 @@ header nav a{
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
+}
+
+@media screen and (min-width: 1024px){
+    header nav{
+        display: flex;
+    }
 }
 
 /*--------------- Home -----------------*/
@@ -113,7 +135,9 @@ header nav a{
     background-size: 300px;
 }
 
-
+#home > img {
+    display: none;
+}
 
 .home-heading{
     display: flex;
@@ -132,6 +156,27 @@ header nav a{
     margin: 0;
 }
 
+@media screen and (min-width: 1024px){
+    #home{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #home > img{
+        display: block;
+
+        width: 444px;
+        height: 444px;
+    }
+
+    .home-cta{
+        background: none;
+    }
+}
+
+
+
 /*-------- Sobre -------------*/
 
 #sobre{
@@ -144,16 +189,45 @@ header nav a{
 
 .sobre-links{
     display: flex;
-    justify-content: space-between;
-    align-items: center; /*Talvez precise remover*/
+    flex-wrap: wrap;
     width: 100%;
     gap: 1.5rem;
-    box-sizing: border-box;
+
 }
 
-#sobre >img {
+.desktop-sobre{
+    display: none;
+}
 
+.mobile-sobre >  img{
+    width: 100%;
     border-radius: 12px;
+}
+
+.desktop-sobre img {
+    max-width: 460px;
+}
+
+.sobre-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 1024px){
+    .mobile-sobre{
+        display: none;
+    }
+
+    .desktop-sobre{
+        display: flex;
+        gap: 92px;
+    }
+
+    .desktop-sobre h2{
+        margin: 0;
+    }
+
 }
 
 /*------------- Projetos -------------*/
@@ -165,6 +239,7 @@ header nav a{
 .cards-wrapper{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -173,6 +248,7 @@ header nav a{
     color: var(--clr-white);
     padding: 1.25rem;
     border-radius: 4px;
+    max-width: 250px;
 }
 
 .card > img{
@@ -183,6 +259,17 @@ header nav a{
 .card > h3{
     font-weight: 18px;
     font-weight: 500%;
+}
+
+@media screen and (min-width: 1024px){
+    #projetos{
+        align-items: center;
+    }
+    .cards-wrapper{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 /*---------- Serviços e Conhecimentos---------------*/
@@ -198,7 +285,7 @@ header nav a{
 
 .base-list{
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
@@ -237,6 +324,25 @@ header nav a{
 
 .conhecimentos-list > li > img{
     width: 72px;
+}
+
+@media screen and (min-width: 1024px){
+    #servicos{
+        flex-direction: row;
+    }
+    #servicos > div{
+        flex-basis: 50%;
+    }
+    .servicos-list{
+        flex-direction: column;
+    }
+
+    .servicos-list > li{
+        justify-content: start;
+        height: 64px;
+        max-width: 320px;
+    }
+    
 }
 
 
@@ -290,6 +396,15 @@ header nav a{
     font-style: normal;
     text-transform: uppercase;
 }
+
+@media screen and (min-width: 1024px){
+    #contat{
+        align-items: center;
+    }
+}
+
+
+/*------------------ Footer -------------------*/
 
 footer{
     display: flex;
