@@ -42,7 +42,7 @@ section{
 
 }
 
-section >h2{
+section h2{
     font-size: 24px;
     font-weight: 500;
     line-height: 150%;
@@ -180,3 +180,45 @@ header nav a{
     font-weight: 18px;
     font-weight: 500%;
 }
+
+/*---------- Serviços e Conhecimentos---------------*/
+
+#servicos{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.base-list{
+    display: flex;
+    gap: 1rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+}
+
+.base-list >li{
+    padding: 1rem;
+    background-color: var(--clr-primaria);
+
+    border-radius: 3px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.servicos-list{
+    gap: 1rem;
+}
+
+.conhecimentos-list{
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
