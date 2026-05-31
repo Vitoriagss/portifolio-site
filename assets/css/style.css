@@ -189,11 +189,21 @@ header nav a{
 
 .sobre-links{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
     width: 100%;
     gap: 1.5rem;
 
+    box-sizing: border-box;
+    margin-top: 1rem;
 }
+
+.sobre-links > .btn {
+    width: 48%; /* Cada botão vai ocupar exatamente 48% do espaço disponível */
+    justify-content: center; /* Centraliza o ícone e o texto dentro do botão */
+}
+
 
 .desktop-sobre{
     display: none;
